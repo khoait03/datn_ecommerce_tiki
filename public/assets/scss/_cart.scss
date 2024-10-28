@@ -1,0 +1,287 @@
+.main {
+    padding-top: 0;
+}
+
+.address {
+    border: none; /* Bỏ viền */
+    background: none; /* Bỏ màu nền */
+    color: inherit; /* Giữ nguyên màu chữ hiện tại */
+    padding: 0; /* Bỏ padding */
+    margin: 0; /* Bỏ margin */
+    font: inherit; /* Giữ nguyên font hiện tại */
+    cursor: pointer; /* Đặt con trỏ chuột thành con trỏ tay */
+    text-decoration: none; /* Bỏ gạch chân nếu có */
+}
+
+
+
+.section-cart {
+
+    /* Đặt kích thước của card */
+    .card {
+        width: 100%;
+        /* Cố định kích thước */
+        max-width: 100%;
+        /* Kích thước tối đa */
+        margin: auto;
+        /* Canh giữa */
+
+        /* Style for delete button */
+        .delete a i {
+            color: black;
+            /* Set default color */
+            transition: color 0.3s ease;
+            /* Add transition */
+        }
+
+        /* Hover effect for delete button */
+        .delete a:hover i {
+            color: red;
+            /* Change color on hover */
+        }
+
+        .quantity {
+
+            /* CSS tùy chỉnh để kiểm soát kích thước của nhóm input */
+            .input-group {
+                width: 120px;
+                /* Đặt chiều rộng */
+            }
+
+        }
+
+        /* CSS tùy chỉnh để kiểm soát kích thước của nút */
+        .input-group-prepend button,
+        .input-group-append button {
+            padding: 0.375rem 0.75rem;
+            /* Điều chỉnh độ dày lề */
+            font-size: 0.875rem;
+            /* Điều chỉnh kích thước chữ */
+        }
+
+        /* CSS tùy chỉnh để kiểm soát kích thước của input */
+        .form-control {
+            padding: 0.375rem 0.75rem;
+            /* Điều chỉnh độ dày lề */
+            font-size: 0.875rem;
+            /* Điều chỉnh kích thước chữ */
+        }
+    }
+
+    /* xóa bỏ nút tăng chỉnh trong number */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .input-group-prepend .btn,
+    .input-group-append .btn {
+        border-radius: 0.25rem;
+    }
+
+    .input-group-prepend .btn:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-group-append .btn:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    /* Thu nhỏ lại card trên thiết bị di động */
+    @media (max-width: 767.98px) {
+        .card {
+            width: 100%;
+            /* Thu nhỏ card */
+        }
+
+    }
+
+    .delete-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .delete-btn:hover {
+        color: red; /* Màu đỏ khi di chuột qua */
+    }
+
+    .cart-item {
+        border-bottom: 1px solid #DEE2E7;
+
+        .box-img {
+            @include boxImage(80, 80);
+
+            img {
+                @include coverImage();
+            }
+        }
+
+        .box-content {
+            .title {
+                font-weight: bold;
+            }
+
+            .text {
+                color: $color-icon;
+            }
+        }
+
+        .input-group {
+            margin-top: 1rem;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+    }
+
+
+    .service {
+        .service-icon {
+            background-color: #DEE2E7;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: #8B96A5;
+
+            }
+        }
+
+        .service-content {
+            .title {
+                font-weight: 500;
+            }
+
+            .text {
+                color: $color-icon;
+            }
+        }
+    }
+
+
+    .list-product {
+        padding: 1.25rem;
+        border-radius: 6px;
+        border: 1px solid $color-border;
+        background-color: white;
+
+        .box-img {
+            height: 15rem;
+            overflow: hidden;
+
+            img {
+                @include coverImage();
+            }
+        }
+
+        .info-product {
+            .price {
+                font-weight: bold;
+            }
+
+            .title-product {
+                @include textWidthEllipis(16, 1.5, 2);
+                color: #606060;
+            }
+
+        }
+    }
+
+
+    .banner {
+        margin: 20px auto;
+        background-image: url("../../image/Mask group.png");
+        background-size: cover;
+        padding: 2rem;
+        border-radius: 6px;
+    }
+
+    /* Loại bỏ nền, viền và chỉ để lại màu chữ đen cho các nút */
+    .Address {
+        color: black; /* Màu chữ */
+        background-color: transparent; /* Nền trong suốt */
+        border: none; /* Loại bỏ viền */
+        box-shadow: none; /* Loại bỏ bóng đổ */
+        padding: 0; /* Loại bỏ khoảng cách bên trong nút */
+    }
+
+    /* Đảm bảo nút không có nền, viền và bóng đổ khi hover hoặc focus */
+    .Address,
+    .Address {
+        background-color: transparent; /* Nền trong suốt khi hover */
+        color: black; /* Màu chữ */
+        border: none; /* Loại bỏ viền */
+        box-shadow: none; /* Loại bỏ bóng đổ */
+    }
+
+
+}
+
+
+.custom-button {
+    @include button-variant($white,
+        $gray-300,
+        $color: $blue,
+        $hover-background: $blue,
+        $hover-border: $blue,
+        $hover-color: $white,
+        $active-background: $blue,
+        $active-border: $blue,
+        $active-color: $red,
+        $disabled-background: $white,
+        $disabled-border: $dark,
+        $disabled-color: $red )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .btn-custom{
+//     @include button-outline-variant(
+//         $danger,
+//         $color-hover: color-contrast($danger),
+//         $active-background: $warning,
+//         $active-border: $primary,
+//         $active-color: color-contrast($danger)
+//       )
+// }

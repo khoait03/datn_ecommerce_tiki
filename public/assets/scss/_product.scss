@@ -1,0 +1,724 @@
+
+.breadcrumb {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+}
+
+.breadcrumb a:hover {
+    color: #555;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #999;
+}
+
+
+.sidebar {
+    border-top: 1px solid #ccc;
+    background-color: #f8f9fa;
+    /* Remove borders from form and elements */
+    #filterForm,
+    #filterForm input,
+    #filterForm .accordion-item,
+    #filterForm .accordion-header,
+    #filterForm .accordion-body,
+    #filterForm .list-group-item,
+    #filterForm .form-check,
+    #filterForm .form-control {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Specific adjustments for Bootstrap classes */
+    #filterForm .form-check-input,
+    #filterForm .form-control {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #filterForm .form-check-input:focus,
+    #filterForm .form-control:focus {
+        border-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .filter-heading {
+        padding-top: 10px;
+        align-items: center;
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-right: 50px;
+    }
+
+    .filter-heading .fa-filter {
+        margin-right: 50px;
+    }
+
+    .accordion-button.custom-button {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .accordion-button.custom-button:hover {
+        background-color: #e2e6ea;
+        color: #495057;
+    }
+
+    .accordion-button.custom-button:focus {
+        box-shadow: none;
+    }
+
+    .accordion-button.custom-button.collapsed {
+        background-color: #ffffff;
+        color: #212529;
+    }
+
+    .accordion-button.custom-button.collapsed:hover {
+        background-color: #e2e6ea;
+        color: #495057;
+    }
+
+    .chevron-icon {
+        margin-right: 10px; /* Adjust the right margin to move the chevron icon */
+        transition: transform 0.3s;
+    }
+
+    .accordion-button.custom-button:not(.collapsed) .chevron-icon {
+        transform: rotate(180deg);
+    }
+
+    .seeAllButton {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .seeAllButton:hover {
+        background-color: #e2e6ea;
+        color: #495057;
+    }
+
+    .apply-button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .apply-button:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+    }
+
+    .accordion-item {
+        &:active {
+            border: #2c0b0e;
+        }
+
+        /* Style for the slider track */
+        .noUi-connect {
+            background: blue;
+        }
+
+        /* Style for the slider handles */
+        .noUi-handle {
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .noUi-handle:before, .noUi-handle:after {
+            display: none; /* Remove default handle shadows */
+        }
+
+        /* Add hover effect for the handles */
+        .noUi-handle:hover {
+            border-color: blue;
+        }
+
+
+        .accordion-button {
+            background-color: #f8f9fa;
+            font-weight: bold;
+
+        }
+
+        .accordion-body {
+            font-weight: initial;
+
+            .seeAllButton {
+                color: #007bff;
+                background-color: transparent;
+                border: none;
+            }
+
+            .accordion-body button.seeAllButton:hover {
+                text-decoration: underline;
+            }
+
+            .list-group {
+                list-style-type: none;
+
+            }
+
+            .list-group a {
+                display: block;
+                padding: 5px 0;
+                color: #333;
+                text-decoration: none;
+            }
+        }
+
+        .accordion-body {
+            padding: 10px;
+            background-color: #f8f9fa;
+
+            .accordion-item {
+                margin-bottom: 1rem; /* Khoảng cách giữa các accordion */
+            }
+
+            .accordion-button.custom-button {
+                background-color: white; /* Nền trắng */
+                color: black; /* Màu chữ đen */
+                border: 1px solid #007bff; /* Viền xanh (sử dụng mã màu của Bootstrap) */
+                padding: 10px 15px; /* Điều chỉnh padding */
+                width: 100%; /* Đặt nút chiếm toàn bộ chiều rộng */
+                text-align: left; /* Căn trái chữ trong nút */
+            }
+
+            .price-buttons {
+                display: flex; /* Sử dụng flexbox để căn chỉnh các nút giá */
+                flex-wrap: wrap; /* Cho phép các nút xuống dòng khi không đủ không gian */
+                gap: 10px; /* Khoảng cách giữa các nút */
+            }
+
+            .price-button {
+                background-color: white; /* Nền trắng cho nút giá */
+                color: black; /* Màu chữ đen */
+                border: 1px solid #007bff; /* Viền xanh */
+                padding: 10px 15px; /* Điều chỉnh padding cho nút */
+                flex: 1 1 150px; /* Cho phép nút mở rộng và co lại */
+                cursor: pointer; /* Con trỏ chuột hiển thị như tay */
+                text-align: center; /* Căn giữa chữ trong nút */
+                transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp khi hover */
+            }
+
+            .price-button:hover {
+                background-color: #007bff; /* Màu nền khi hover */
+                color: white; /* Màu chữ trắng khi hover */
+            }
+
+            .range-inputs {
+                margin-top: 15px; /* Khoảng cách trên cho nhóm nhập liệu giá */
+            }
+
+            .small-input {
+                width: calc(50% - 10px); /* Đặt chiều rộng cho các input, giảm một chút để tạo khoảng cách */
+                margin-right: 10px; /* Khoảng cách giữa các input */
+            }
+
+            .apply-button {
+                margin-top: 10px; /* Khoảng cách trên cho nút áp dụng */
+                background-color: white; /* Nền trắng cho nút áp dụng */
+                color: black; /* Màu chữ đen */
+                border: 1px solid #007bff; /* Viền xanh */
+                padding: 10px 15px; /* Điều chỉnh padding cho nút áp dụng */
+                cursor: pointer; /* Con trỏ chuột hiển thị như tay */
+                transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp khi hover */
+            }
+
+            .apply-button:hover {
+                background-color: #007bff; /* Màu nền khi hover */
+                color: white; /* Màu chữ trắng khi hover */
+            }
+
+            .star {
+                color: orange;
+            }
+            .range-inputs {
+                display: flex; /* Sử dụng flexbox để sắp xếp các nhóm input */
+                justify-content: space-between; /* Tạo khoảng cách giữa các nhóm */
+                margin-top: 15px; /* Khoảng cách trên cho nhóm nhập liệu giá */
+            }
+
+            .input-group {
+                display: flex;
+                flex-direction: column; /* Sắp xếp label và input theo chiều dọc */
+                flex: 1; /* Cho phép các nhóm input chiếm không gian bằng nhau */
+                margin-right: 10px; /* Khoảng cách giữa các nhóm input */
+            }
+
+            .input-group:last-child {
+                margin-right: 0; /* Không có khoảng cách bên phải cho nhóm cuối */
+            }
+
+            .input-group label {
+                margin-bottom: 5px; /* Khoảng cách dưới cho label */
+                font-weight: bold; /* Làm đậm chữ cho label */
+                color: black; /* Màu chữ đen */
+            }
+
+            .small-input {
+                padding: 12px; /* Tăng padding cho ô nhập để tạo khoảng cách lớn hơn */
+                border: 1px solid #007bff; /* Viền xanh */
+                border-radius: 4px; /* Bo góc cho input */
+                width: 100%; /* Chiều rộng 100% để ô nhập chiếm toàn bộ không gian của nhóm */
+                font-size: 16px; /* Tăng kích thước chữ trong ô nhập */
+                box-sizing: border-box; /* Đảm bảo padding và border nằm trong chiều rộng */
+            }
+
+            .small-input:focus {
+                border-color: #0056b3; /* Thay đổi màu viền khi input được chọn */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng khi input được chọn */
+            }
+
+
+            .star-gray {
+                color: #8B96A5;
+            }
+            .apply-button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                background-color: #ffffff;
+                color: #007bff;
+                border: 1px solid #a7acb1;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+
+        .accordion-button:focus,
+        .accordion-button:active {
+            background-color: #f8f9fa;
+            border: none;
+        }
+    }
+}
+
+.content-top {
+    background-color: white;
+}
+
+.content-top {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content-top p {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.col-md-6 .form-check,
+.col-md-6 .form-group {
+    margin-bottom: 0;
+}
+
+.switchView i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#Clearallfilter {
+    display: none;
+}
+
+.filters-applied {
+    padding-top: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    .remove-filter {
+        color: #007bff;
+        background-color: transparent;
+        border: none;
+    }
+
+    .filter-btn {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .filter-btn i {
+        margin-left: 5px;
+    }
+
+    .filter-btn:hover {
+        border-color: #007bff;
+    }
+
+    .seeAllButton {
+        color: #007bff;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.rating {
+    .bi-star-half {
+        position: relative;
+    }
+
+    .bi-star-half::before {
+        content: "\f005"; /* Unicode cho biểu tượng ngôi sao đầy */
+        color: lightgray;
+        position: absolute;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .bi-star-half::after {
+        content: "\f089"; /* Unicode cho biểu tượng ngôi sao nửa */
+        color: gold;
+        position: absolute;
+        width: 50%;
+        overflow: hidden;
+        left: 0;
+    }
+}
+
+#productColumn {
+    display: none;
+}
+
+.product {
+    .product-grid {
+        padding-top: 20px;
+
+        .product-item {
+
+            .product-card {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: box-shadow 0.3s ease;
+                position: relative;
+            }
+
+            .product-card:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .product-img {
+                margin: 10px;
+                display: flex;
+                width: calc(100% - 20px);
+                height: 280px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .product-img img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+
+
+            .product-img:hover img {
+                transform: scale(1.1);
+            }
+
+            .product-info {
+                padding: 10px;
+            }
+
+            .product-price-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .product-price {
+                margin: 0 0 5px;
+                font-size: 20px;
+                display: flex;
+                font-weight: bolder;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+
+                @include truncate-text(20, 20);
+
+                .product-price-discounted {
+                    text-decoration: line-through;
+                    color: #999;
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
+            }
+
+            .star {
+                color: orange;
+            }
+
+            .product-favorite {
+                width: 30px;
+                height: 30px;
+                color: #0a53be;
+                border: 1px solid #5c636a;
+                border-radius: 4px;
+                margin: 10px;
+                padding: 5px;
+                align-items: center;
+            }
+
+            .product-title {
+                margin: 0;
+                color: #888;
+                @include textWidthEllipis(14, 1.5, 1);
+            }
+        }
+
+
+        .sale-off {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 216, 64, 0.92);
+            color: red;
+            width: 50px;
+            height: 30px;
+            border-top-right-radius: .375rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                border-left: 25px solid rgba(255, 216, 64, 0.92);
+                border-right: 25px solid rgba(255, 216, 64, 0.92);
+                border-bottom: 10px solid transparent;
+            }
+        }
+    }
+
+    .product-column {
+        padding-top: 20px;
+
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-img {
+            margin: 10px;
+            display: flex;
+            width: calc(100% - 20px);
+            height: 220px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .product-img:hover img {
+            transform: scale(1.2);
+        }
+
+        .product-info {
+            padding: 0;
+        }
+
+        .product-title {
+            font-weight: bold;
+            display: flex;
+            @include textWidthEllipis(20, 1.5, 1);
+
+        }
+
+        .product-title-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .product-favorite {
+                width: 30px;
+                height: 30px;
+                color: #0a53be;
+                border: 1px solid #5c636a;
+                border-radius: 4px;
+                margin: 10px;
+                padding: 5px;
+                align-items: center;
+            }
+        }
+
+        .product-price {
+            margin: 0 0 5px;
+            font-size: 20px;
+            display: flex;
+            font-weight: bolder;
+
+            .product-price-discounted {
+                text-decoration: line-through;
+                color: #999;
+                font-size: 16px;
+                margin: 5px;
+            }
+        }
+
+        .rating {
+            display: flex;
+
+            .star {
+                color: orange;
+            }
+
+            .number-star {
+                padding-left: 10px;
+                color: orange;
+            }
+
+            .order {
+                padding-left: 10px;
+                color: gray;
+            }
+
+            .shipping {
+                padding-left: 10px;
+                color: limegreen;
+            }
+        }
+
+        .product-description {
+            font-size: 12px;
+            color: #888;
+            @include textWidthEllipis(16, 1.5, 2);
+        }
+
+        .view-detail a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .sale-off {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 216, 64, 0.92);
+            color: red;
+            width: 50px;
+            height: 30px;
+            border-top-right-radius: .375rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                border-left: 25px solid rgba(255, 216, 64, 0.92);
+                border-right: 25px solid rgba(255, 216, 64, 0.92);
+                border-bottom: 10px solid transparent;
+            }
+        }
+    }
+
+    .no-product-message {
+        height: 500px;
+        text-align: center;
+        color: #dc3545; /* Màu sắc cho thông báo */
+        font-size: 18px; /* Kích thước chữ */
+        margin-top: 10px; /* Khoảng cách từ trên xuống */
+    }
+
+    .no-product-message p {
+        padding-top: 250px; /* Khoảng cách giữa icon và văn bản */
+    }
+
+    .no-product-message i {
+        margin-right: 5px; /* Khoảng cách giữa icon và văn bản */
+    }
+
+    .pagination-menu {
+        padding-top: 50px;
+        display: flex;
+        justify-content: flex-end;
+
+        .dropdown {
+            padding-right: 10px;
+
+            .dropdown-toggle.n {
+                border: 1px solid #ced4da;
+                border-radius: 8px;
+            }
+
+            .btn {
+                background-color: white;
+                color: #1a1d20;
+            }
+
+            .dropdown-item {
+                text-decoration: none;
+            }
+        }
+
+        .page-link {
+            color: #1a1d20;
+            text-decoration: none;
+        }
+    }
+
+    .text-muted {
+        display: none;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,321 @@
+.profile-user {
+    font-size: 15px;
+    padding-bottom: 100px;
+}
+
+.icon1 {
+    font-size: 18px;
+    color: blue;
+    font-weight: 800;
+}
+
+.profile-li_text {
+    font-size: 15px;
+}
+
+.list-group-item i {
+    padding: 0;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    padding: 0 0;
+}
+
+.list-group-item {
+    text-decoration: none;
+}
+
+.list-group .item1 {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+#collapseExample {
+    border-top: 1px dashed #c7c7c7;
+}
+
+.h-500 {
+    height: 500px;
+    /* Thiết lập chiều cao cố định là 500px */
+}
+
+@media (max-width: 576px) {
+    .gender {
+        gap: 15px;
+    }
+
+    .avatar-first {
+        width: 80px;
+    }
+
+    .profile-user {
+        font-size: 12px;
+    }
+
+    .icon1 {
+        font-size: 15px;
+    }
+
+    .profile-li_text {
+        font-size: 12px;
+    }
+}
+
+/* box user first */
+.avatar-first {
+    border-radius: 50%;
+    /* Thiết lập bán kính bo tròn bằng 50% */
+    object-fit: cover;
+    clip-path: circle(); /* Cắt hình ảnh theo hình tròn */
+}
+
+.name-user {
+    width: 100px;
+    /* Chiều rộng hộp */
+    overflow: hidden;
+    /* Ẩn văn bản tràn ra ngoài */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ba chấm */
+    white-space: nowrap;
+    /* Không chèn xuống dòng */
+}
+
+.user-profile ul li a {
+    color: black;
+    font-size: 15px;
+}
+
+.user-profile li a {
+    padding: 0 10px;
+    color: black;
+    font-size: 15px;
+}
+
+.user-profile li i {
+    color: black;
+}
+
+// profile address
+
+.modal-header h1 {
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1rem 1.5rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.dropdown-menu {
+    //width: 100%;
+    padding: 0.5rem;
+}
+
+.address-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.address-select select {
+    flex: 1;
+}
+
+.address-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.password {
+    padding: 0px 40px;
+}
+
+.address {
+    padding: 0px 20px;
+}
+
+.nav-tabs .nav-link:hover {
+    text-decoration: none;
+}
+
+// thanh search trong đơn hàng của tôi
+.input-group {
+    position: relative;
+}
+
+.search-input {
+    padding-left: 2.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    background-color: #e9ecef;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 35%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1.25rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+// my order
+.img-thumbnails {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.orders-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.price-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.price-container p {
+    display: flex;
+    white-space: nowrap;
+    margin: 0;
+}
+
+//.orders-container {
+//    height: 400px;
+//}
+
+.box-myorder_img {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column; /* Xếp dọc hình ảnh và văn bản */
+}
+
+.background-image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box-myorder_img span {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+/// canceled my order layout
+
+.custom-container {
+    max-width: 800px;
+}
+
+.custom-back-button {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.custom-alert {
+    background-color: #FFF3CD;
+    color: #856404;
+    border: 1px solid #FFEEBA;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-order-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.custom-shop-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.custom-shop-name span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.custom-shop-name a {
+    font-size: 14px;
+}
+
+.custom-order-details {
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.custom-order-details img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+}
+
+.custom-order-info {
+    flex: 1;
+}
+
+.custom-order-info p {
+    margin: 0;
+}
+
+.custom-order-price {
+    text-align: right;
+}
+
+.custom-order-price p {
+    margin: 0;
+}
+
+.custom-order-actions {
+    padding-top: 10px;
+}
+
+.custom-order-actions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-order-actions th,
+.custom-order-actions td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: right;
+}
+
+.custom-reason {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.custom-reason p {
+    font-size: 14px;
+    margin: 0;
+}
+/// End canceled my order layout
