@@ -21,14 +21,29 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 
-class CategoryResource extends Resource
+class CategoryResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-cube';
     protected static ?string $label = 'Danh mục';
     protected static ?string $navigationGroup = 'Sản phẩm';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
+
+
     public static function form(Form $form): Form
     {
         return $form
