@@ -24,14 +24,27 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Mail;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 
-class ShopResource extends Resource
+class ShopResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = Shop::class;
 
 
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
     protected static ?string $label = 'Cửa hàng';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
 
     public static function form(Form $form): Form
     {
