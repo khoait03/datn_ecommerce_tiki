@@ -18,9 +18,10 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 
 
-class BrandResource extends Resource
+class BrandResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = Brand::class;
 
@@ -29,6 +30,18 @@ class BrandResource extends Resource
     protected static ?string $navigationGroup = 'Sản phẩm';
 
     protected static ?string $label = 'Thương hiệu';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
 
     public static function form(Form $form): Form
     {
