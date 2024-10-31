@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProductVariationResource\Pages;
 use App\Filament\Resources\ProductVariationResource\RelationManagers;
 use App\Models\ProductVariation;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -15,7 +16,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 
-class ProductVariationResource extends Resource
+class ProductVariationResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = ProductVariation::class;
 
@@ -23,6 +24,18 @@ class ProductVariationResource extends Resource
     protected static ?string $label = 'Biến thể';
 
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
 
     public static function form(Form $form): Form
     {
