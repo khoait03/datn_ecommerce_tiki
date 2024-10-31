@@ -6,6 +6,7 @@ use App\Enums\OrderStatus;
 use App\Filament\Resources\ShippingAddressResource\Pages;
 use App\Filament\Resources\ShippingAddressResource\RelationManagers;
 use App\Models\ShippingAddress;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -24,13 +25,25 @@ use Filament\Forms\Components\Toggle;
 
 
 
-class ShippingAddressResource extends Resource
+class ShippingAddressResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = ShippingAddress::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
     protected static ?string $navigationGroup = 'Đơn hàng';
     protected static ?string $label = 'Địa chỉ đơn hàng';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
     public static function form(Form $form): Form
     {
         return $form
