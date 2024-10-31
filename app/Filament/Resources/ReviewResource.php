@@ -8,6 +8,7 @@ use App\Filament\Resources\ReviewResource\RelationManagers;
 use App\Models\Product;
 use App\Models\Review;
 use App\Models\User;
+use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
@@ -21,7 +22,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 
-class ReviewResource extends Resource
+class ReviewResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = Review::class;
 
@@ -31,6 +32,18 @@ class ReviewResource extends Resource
     /**
      * @throws \Exception
      */
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+        ];
+    }
     public static function form(Form $form): Form
     {
         return $form

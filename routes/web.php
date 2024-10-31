@@ -42,7 +42,7 @@ Route::prefix('/')->group(function () {
     Route::get('/san-pham', [ProductController::class, 'index'])->name('product.index');
     Route::get('/san-pham/danh-muc/{category}', [ProductController::class, 'showByCategory'])->name('products.category');
     Route::get('/san-pham/{id}', [ProductController::class, 'show'])->name('product.detail');
-    Route::post('/add-to-cart', [ProductController::class, 'addToCart'])->name('product.addToCart');
+//    Route::post('/add-to-cart', [ProductController::class, 'addToCart'])->name('product.addToCart');
     Route::get('/san-pham/{id}', [ProductController::class, 'show'])->name('product.detail');
     Route::post('/get-retail-price', [ProductController::class, 'getRetailPrice']);
     Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('product.addToCart');
